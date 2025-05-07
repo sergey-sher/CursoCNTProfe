@@ -2,7 +2,9 @@ package edu.cnt.developer.profe
 
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.util.Log
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,15 +22,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         Log.d("MIAPP", "Estoy en oncreate")
-
         val nombreVersion:String = obtenerVersionAndroid()
         Log.d("MIAPP", "Version " + nombreVersion)
         Log.d("MIAPP", "Version = $nombreVersion")
     }
 
-    fun obtenerVersionAndroid(): String
-    {
-        var nombreVersion:String = ""
+    fun obtenerVersionAndroid(): String {
+        var nombreVersion : String = ""
         nombreVersion = when (Build.VERSION.SDK_INT) {
             Build.VERSION_CODES.Q -> "ANDROID Q 10"
             Build.VERSION_CODES.R -> "ANDROID R 11"
@@ -37,6 +37,13 @@ class MainActivity : AppCompatActivity() {
             else -> "Version distinta 10 u 15"
         }
         return nombreVersion
+    }
+
+    fun botonClickado(view: View) {
+        Log.d("MIAPP", "El usario ha tocado al boton")
+        val nombreVersion = obtenerVersionAndroid()
+        val cajaTexto : TextView = findViewById<TextView>(R.id.cajatexto)
+        cajaTexto.text = nombreVersion
     }
 
 }
