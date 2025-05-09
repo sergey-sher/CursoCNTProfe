@@ -1,5 +1,6 @@
 package edu.cnt.developer.profe
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.util.Log
@@ -36,33 +37,38 @@ class IMCActivity : AppCompatActivity() {
 
     fun CalcularIMC(view: View) {
         if (view.id == R.id.buttonCalcular) {
-            Log.d("MIAPP", "El usario ha tocado al boton 'Calcular IMC': ${view.id}")
-            Log.d("MIAPP", "absolute = ${R.id.buttonCalcular.absoluteValue}")
+            Log.d("MYAPP", "CalcularIMC: El usario ha tocado al boton 'Calcular IMC': ${view.id}")
+            Log.d("MYAPP", "CalcularIMC: absolute = ${R.id.buttonCalcular.absoluteValue}")
 
             val weight : Float = findViewById<EditText>(R.id.editTextWeight).text.toString().toFloat()
             val height : Float = findViewById<EditText>(R.id.editTextHeight).text.toString().toFloat()
-            val imcIndex = weight / (height * height)
+            val indexIMC = weight / (height * height)
 
-            var userMessage = "Su IMC es = ${imcIndex.roundToInt()}"
-            Log.d("MIAPP", userMessage)
+            var userMessage = "Su IMC es = ${indexIMC.roundToInt()}"
+            Log.d("MYAPP", "CalcularIMC: ${userMessage}")
 
-            var result: String = ""
-            if (imcIndex < 16)
-                result = "Usted está desnutrido"
-            else if (imcIndex < 18)
-                result = "Usted está un poco delgado"
-            else if (imcIndex < 25)
-                result = "Usted está en perfecta forma"
-            else if (imcIndex < 31)
-                result = "Usted tiene un poco sobrepeso"
+            var textIMC: String = ""
+            if (indexIMC < 16)
+                textIMC = "Usted está desnutrido"
+            else if (indexIMC < 18)
+                textIMC = "Usted está un poco delgado"
+            else if (indexIMC < 25)
+                textIMC = "Usted está en perfecta forma"
+            else if (indexIMC < 31)
+                textIMC = "Usted tiene un poco sobrepeso"
             else
-                result = "Usted está gordo"
-            Log.d("MIAPP", "Su resultado es - ${result}")
+                textIMC = "Usted está gordo"
+            Log.d("MYAPP", "CalcularIMC: Su resultado es - ${textIMC}")
 
-            userMessage += ": ${result}"
-            Log.d("MIAPP", userMessage)
-            val notiToast : Toast = Toast.makeText(this, userMessage, Toast.LENGTH_LONG)
+            userMessage += ": ${textIMC}"
+            Log.d("MYAPP", "CalcularIMC: ${userMessage}")
+            val notiToast: Toast = Toast.makeText(this, userMessage, Toast.LENGTH_LONG)
             notiToast.show()
+
+            val intentResult: Intent = Intent(this, ResultadoIMCActivity::class.java)
+            intentResult.putExtra("IMC_RESULT", indexIMC)
+            Log.d("MYAPP", "CalcularIMC: Putting ${indexIMC} to IMC_RESULT")
+            startActivity(intentResult)
 
         }
 

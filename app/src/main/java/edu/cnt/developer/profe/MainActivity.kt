@@ -21,29 +21,29 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        Log.d("MIAPP", "Estoy en oncreate")
-        val nombreVersion:String = obtenerVersionAndroid()
-        Log.d("MIAPP", "Version " + nombreVersion)
-        Log.d("MIAPP", "Version = $nombreVersion")
+        Log.d("MYAPP", "Estoy en oncreate")
+        val nameVersion:String = obtenerVersionAndroid()
+        Log.d("MYAPP", "Version " + nameVersion)
+        Log.d("MYAPP", "Version = $nameVersion")
     }
 
     fun obtenerVersionAndroid(): String {
-        var nombreVersion : String = ""
-        nombreVersion = when (Build.VERSION.SDK_INT) {
+        var nameVersion : String = ""
+        nameVersion = when (Build.VERSION.SDK_INT) {
             Build.VERSION_CODES.Q -> "ANDROID Q 10"
             Build.VERSION_CODES.R -> "ANDROID R 11"
             Build.VERSION_CODES.UPSIDE_DOWN_CAKE -> "ANDROID V 14"
             Build.VERSION_CODES.VANILLA_ICE_CREAM -> "ANDROID V 15"
             else -> "Version distinta 10 u 15"
         }
-        return nombreVersion
+        return nameVersion
     }
 
     fun botonClickado(view: View) {
-        Log.d("MIAPP", "El usario ha tocado al boton")
-        val nombreVersion = obtenerVersionAndroid()
-        val cajaTexto : TextView = findViewById<TextView>(R.id.cajatexto)
-        cajaTexto.text = nombreVersion
+        Log.d("MYAPP", "El usario ha tocado al boton")
+        val nameVersion = obtenerVersionAndroid()
+        val fieldText : TextView = findViewById<TextView>(R.id.cajatexto)
+        fieldText.text = nameVersion
     }
 
 }
