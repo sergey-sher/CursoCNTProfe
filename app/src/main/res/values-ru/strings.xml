@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CursoCNTProfe</string>
+    <string name="imc_hint_weight">Введите вес (кг)</string>
+    <string name="imc_hint_height">Введите рост (м)</string>
+    <string name="imc_result_message">Ваш ИМТ составляет %1f</string>
+    <string name="an_hint_write_number">Введите число</string>
+    <string name="an_text_odds">Попытки</string>
+    <string name="an_text_guess_number">Угадай число</string>
+    <string name="an_btn_check">Попробовать</string>
+    <string name="an_text_msg_success">Ты прав, чемпион, ПОЗДРАВЛЯЕМ!</string>
+    <string name="an_text_msg_correct">Правильно!</string>
+    <string name="an_text_msg_wrong_greater">Ошибка! Число больше.</string>
+    <string name="an_text_msg_wrong_less">Ошибка! Число меньше.</string>
+    <string name="an_text_msg_cantplay">Ты больше не можешь играть.</string>
+    <string name="menu_clean">Очистить</string>
+    <string name="menu_exit">Выйти</string>
+</resources>

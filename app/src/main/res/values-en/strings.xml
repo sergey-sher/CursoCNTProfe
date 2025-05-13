@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CursoCNTProfe</string>
+    <string name="imc_hint_weight">Enter weight (kg)</string>
+    <string name="imc_hint_height">Enter height (m)</string>
+    <string name="imc_result_message">Your IMC is %1f</string>
+    <string name="an_hint_write_number">Write the number here</string>
+    <string name="an_text_odds">Odds</string>
+    <string name="an_text_guess_number">Guess the number</string>
+    <string name="an_btn_check">Try</string>
+    <string name="an_text_msg_success">You guessed right, champion, CONGRATULATIONS!</string>
+    <string name="an_text_msg_correct">Right!</string>
+    <string name="an_text_msg_wrong_greater">Error! The number is greater.</string>
+    <string name="an_text_msg_wrong_less">Error! The number is less.</string>
+    <string name="an_text_msg_cantplay">You can\'t play anymore.</string>
+    <string name="menu_clean">Clean</string>
+    <string name="menu_exit">Exit</string>
+</resources>

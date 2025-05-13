@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CursoCNTProfe</string>
+    <string name="imc_hint_weight">Zadejte hmotnost (kg)</string>
+    <string name="imc_hint_height">Zadejte výšku (m)</string>
+    <string name="imc_result_message">Vaše BMI je %1f</string>
+    <string name="an_hint_write_number">Napište sem číslo</string>
+    <string name="an_text_odds">Šance</string>
+    <string name="an_text_guess_number">Uhádni číslo</string>
+    <string name="an_btn_check">Zkusit</string>
+    <string name="an_text_msg_success">Správně jsi to vystihl, šampione, GRATULUJI!</string>
+    <string name="an_text_msg_correct">Právo!</string>
+    <string name="an_text_msg_wrong_greater">Chyba! Číslo je větší.</string>
+    <string name="an_text_msg_wrong_less">Chyba! Číslo je menší.</string>
+    <string name="an_text_msg_cantplay">Už si nemůžeš hrát.</string>
+    <string name="menu_clean">Vymazat</string>
+    <string name="menu_exit">Odhlásit se</string>
+</resources>

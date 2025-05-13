@@ -1,9 +1,13 @@
 package edu.cnt.developer.profe
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import kotlin.math.absoluteValue
 import android.widget.EditText
 import android.widget.Toast
@@ -24,18 +28,30 @@ class IMCActivity : AppCompatActivity() {
             insets
         }
 
-        /*
-        * imc = PESO (KG) /  ALTURA * ALTURA
-        * IMC < 16 -> desnutridos
-        * IMC >=16 y <18 -> delgados
-        * IMC >=18 y <25 -> ideal
-        * IMC >=25 Y <31 -> sobrepeso
-        * IMC >=31 -> obeso
-        */
-
     }
 
-    fun CalcularIMC(view: View) {
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_imc, menu)//ya pinto el menú
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        Log.d("MYAPP", "onOptionsItemSelected: Menu app bar tocado': ${item.itemId} ${item.title} ${item.itemId}")
+        when (item.itemId)
+        {
+            R.id.opcionLimpiar -> {
+                Log.d("MYAPP", "onOptionsItemSelected: Ha tocado la opcion de limpiar")
+                this.limpiaFormulario()
+            }
+            R.id.opcionSalir -> {
+                Log.d("MYAPP", "onOptionsItemSelected: Ha tocado la opcion de salir")
+                this.finish()
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    fun calcularIMC(view: View) {
         if (view.id == R.id.buttonCalcular) {
             Log.d("MYAPP", "CalcularIMC: El usario ha tocado al boton 'Calcular IMC': ${view.id}")
             Log.d("MYAPP", "CalcularIMC: absolute = ${R.id.buttonCalcular.absoluteValue}")
@@ -72,6 +88,26 @@ class IMCActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    private fun limpiaFormulario() {
+        findViewById<EditText>( R.id.editTextWeight).text.clear()
+        findViewById<EditText>( R.id.editTextHeight).text.clear()
+    }
+
+    private fun salirApp() {
+        //this.finish()
+        var dialogo = AlertDialog.Builder(this)
+            .setTitle("SALIR")
+            .setMessage("Desea salir?")
+            .setNegativeButton("NO") {
+                dialog: DialogInterface, opcion: Int ->
+                    dialog.cancel()
+            }
+            .setPositiveButton("SÍ"){
+                    dialog, opcion -> this.finish()
+            }
+        dialogo.show()
     }
 
 }
