@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">CursoCNTProfe</string>
     <string name="imc_hint_weight">Zadejte hmotnost (kg)</string>
     <string name="imc_hint_height">Zadejte výšku (m)</string>
     <string name="imc_result_message">Vaše BMI je %1f</string>

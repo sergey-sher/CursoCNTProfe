@@ -21,7 +21,7 @@ class IMCActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_imcactivity)
+        setContentView(R.layout.activity_imc_activity)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -81,7 +81,7 @@ class IMCActivity : AppCompatActivity() {
             val notiToast: Toast = Toast.makeText(this, userMessage, Toast.LENGTH_LONG)
             notiToast.show()
 
-            val intentResult: Intent = Intent(this, ResultadoIMCActivity::class.java)
+            val intentResult: Intent = Intent(this, IMCResultActivity::class.java)
             intentResult.putExtra("IMC_RESULT", indexIMC)
             Log.d("MYAPP", "CalcularIMC: Putting ${indexIMC} to IMC_RESULT")
             startActivity(intentResult)

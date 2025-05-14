@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">CursoCNTProfe</string>
+    <string name="app_name" translatable="false">CursoCNT</string>
     <string name="imc_hint_weight">Intro peso (kg)</string>
     <string name="imc_hint_height">Intro altura (m)</string>
     <string name="imc_result_message">Su IMC es %1f</string>

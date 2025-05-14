@@ -4,19 +4,16 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
-class ResultadoIMCActivity : AppCompatActivity() {
+class IMCResultActivity : AppCompatActivity() {
 
     lateinit var textResult: TextView // = findViewById<>(R.id.textIMC)
     lateinit var viewResult: ImageView // = findViewById<>(R.id.imageIMC)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_resultado_imcactivity)
+        setContentView(R.layout.activity_imc_resultado_activity)
 
         val resultIMCNumerico = intent.getFloatExtra("IMC_RESULT", 0f)
         Log.d("MYAPP", "onCreate: Getting IMC_RESULT => ${resultIMCNumerico}")

@@ -22,12 +22,12 @@ class PrincipalActivity : AppCompatActivity() {
             insets
         }
 
-        val remoteUrl:String = "https://cntg.xunta.gal/"
-        val intent = Intent(this, WebViewActivity::class.java)
-        intent.data = Uri.parse(remoteUrl)
+        Log.d("MYAPP", "PrincipalActivity: onCreate: start")
+        val intent = Intent(this, UsersListActivity::class.java)
+        //val intent = Intent(this, PerrosActivity::class.java)
         startActivity(intent)
-//        val intentImplicito = Intent(Intent.ACTION_VIEW, Uri.parse(remoteUrl))
-//        startActivity(intentImplicito)
+        Log.d("MYAPP", "PrincipalActivity: onCreate: finish")
+
     }
 
 }

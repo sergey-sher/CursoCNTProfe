@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">CursoCNTProfe</string>
     <string name="imc_hint_weight">Введите вес (кг)</string>
     <string name="imc_hint_height">Введите рост (м)</string>
     <string name="imc_result_message">Ваш ИМТ составляет %1f</string>
