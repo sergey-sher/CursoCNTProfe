@@ -14,5 +14,6 @@
     <string name="an_text_msg_cantplay">Ya no puedes jugar más.</string>
     <string name="menu_clean">Limpiar</string>
     <string name="menu_exit">Salir</string>
+    <string name="dogs_act_label">Galería de perros</string>
 
 </resources>

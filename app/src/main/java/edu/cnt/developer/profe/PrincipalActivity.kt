@@ -10,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import edu.cnt.developer.profe.products.ProductsActivity
 
 class PrincipalActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +24,10 @@ class PrincipalActivity : AppCompatActivity() {
         }
 
         Log.d("MYAPP", "PrincipalActivity: onCreate: start")
-        val intent = Intent(this, UsersListActivity::class.java)
+        val intent = Intent(this, ProductsActivity::class.java)
+        //val intent = Intent(this, DogsActivity::class.java)
+        //val intent = Intent(this, UsersListActivity::class.java)
+        //val intent = Intent(this, UsersListActivity::class.java)
         //val intent = Intent(this, PerrosActivity::class.java)
         startActivity(intent)
         Log.d("MYAPP", "PrincipalActivity: onCreate: finish")

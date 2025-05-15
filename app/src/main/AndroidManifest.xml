@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -15,21 +16,40 @@
         android:theme="@style/Theme.CursoCNTProfe"
         tools:targetApi="31">
         <activity
+            android:name=".products.ProductsActivity"
+            android:exported="false"
+            android:label="Lista de productos" >
+        </activity>
+        <activity
+            android:name=".DogsGalleryActivity"
+            android:exported="false"
+            android:label="Gallery of dogs" >
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".DogsActivity"
+            android:exported="false" >
+        </activity>
+        <activity
             android:name=".UsersListActivity"
-            android:exported="false" />
+            android:exported="false" >
+        </activity>
         <activity
             android:name=".PrincipalActivity"
-            android:exported="true">
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-             <intent-filter>
-                 <action android:name="android.intent.action.MAIN" />
-
-                 <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".WebViewActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -49,9 +69,8 @@
         </activity>
         <activity
             android:name=".ANActivity"
-            android:exported="true"
-            android:label="Adivina el numero">
-
+            android:exported="false"
+            android:label="Adivina el numero" >
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
             <!--  -->
@@ -61,20 +80,21 @@
         <activity
             android:name=".IMCActivity"
             android:exported="true"
-            android:label="Calculo su IMC">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:label="Calculo su IMC" >
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".IMCResultActivity"
-            android:exported="false">
+            android:exported="false" >
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
+
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
             <!--  -->

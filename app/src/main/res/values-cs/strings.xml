@@ -14,4 +14,5 @@
     <string name="an_text_msg_cantplay">Už si nemůžeš hrát.</string>
     <string name="menu_clean">Vymazat</string>
     <string name="menu_exit">Odhlásit se</string>
+    <string name="dogs_act_label">Galerie psů</string>
 </resources>

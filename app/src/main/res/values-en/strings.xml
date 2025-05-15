@@ -14,4 +14,5 @@
     <string name="an_text_msg_cantplay">You can\'t play anymore.</string>
     <string name="menu_clean">Clean</string>
     <string name="menu_exit">Exit</string>
+    <string name="dogs_act_label">Dog gallery</string>
 </resources>
