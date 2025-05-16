@@ -1,4 +1,4 @@
-package edu.cnt.developer.profe
+package edu.cnt.developer.profe.dogs
 
 import android.content.Intent
 import android.os.Bundle
@@ -14,6 +14,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
+import edu.cnt.developer.profe.utils.NetUtil
+import edu.cnt.developer.profe.R
 import edu.cnt.developer.profe.databinding.ActivityDogsBinding
 
 class DogsActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {

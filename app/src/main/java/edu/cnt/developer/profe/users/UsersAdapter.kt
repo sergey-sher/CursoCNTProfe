@@ -1,8 +1,9 @@
-package edu.cnt.developer.profe
+package edu.cnt.developer.profe.users
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import edu.cnt.developer.profe.R
 
 class UsersAdapter(var usersList: List<User>): RecyclerView.Adapter<UsersViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsersViewHolder {

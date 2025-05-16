@@ -1,4 +1,4 @@
-package edu.cnt.developer.profe
+package edu.cnt.developer.profe.utils
 
 import android.content.Context
 import android.net.ConnectivityManager

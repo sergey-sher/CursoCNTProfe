@@ -1,8 +1,9 @@
-package edu.cnt.developer.profe
+package edu.cnt.developer.profe.users
 
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import edu.cnt.developer.profe.R
 
 class UsersViewHolder(itemView:View): RecyclerView.ViewHolder(itemView) {
     val userName: TextView = itemView.findViewById(R.id.userName)

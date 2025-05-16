@@ -18,10 +18,10 @@
         <activity
             android:name=".products.ProductsActivity"
             android:exported="false"
-            android:label="Lista de productos" >
+            android:label="Lista de productos del Internet" >
         </activity>
         <activity
-            android:name=".DogsGalleryActivity"
+            android:name=".dogs.DogsGalleryActivity"
             android:exported="false"
             android:label="Gallery of dogs" >
 <!--            <intent-filter>-->
@@ -31,11 +31,11 @@
 <!--            </intent-filter>-->
         </activity>
         <activity
-            android:name=".DogsActivity"
+            android:name=".dogs.DogsActivity"
             android:exported="false" >
         </activity>
         <activity
-            android:name=".UsersListActivity"
+            android:name=".users.UsersListActivity"
             android:exported="false" >
         </activity>
         <activity
@@ -78,7 +78,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".IMCActivity"
+            android:name=".imc.IMCActivity"
             android:exported="true"
             android:label="Calculo su IMC" >
 <!--            <intent-filter>-->
@@ -88,7 +88,7 @@
 <!--            </intent-filter>-->
         </activity>
         <activity
-            android:name=".IMCResultActivity"
+            android:name=".imc.IMCResultActivity"
             android:exported="false" >
         </activity>
         <activity

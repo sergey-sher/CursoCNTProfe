@@ -1,4 +1,4 @@
-package edu.cnt.developer.profe
+package edu.cnt.developer.profe.imc
 
 import android.app.AlertDialog
 import android.content.DialogInterface
@@ -15,6 +15,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import edu.cnt.developer.profe.R
 import kotlin.math.roundToInt
 
 class IMCActivity : AppCompatActivity() {

@@ -1,10 +1,11 @@
-package edu.cnt.developer.profe
+package edu.cnt.developer.profe.imc
 
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import edu.cnt.developer.profe.R
 
 class IMCResultActivity : AppCompatActivity() {
 
