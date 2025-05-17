@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/opcionLimpiar"
+        android:id="@+id/itemMenuClear"
         android:orderInCategory="1"
         android:title="@string/menu_clean"
         app:showAsAction="always"
-        android:icon="@drawable/menu_svg_clean"
+        android:icon="@drawable/menu_clean"
         />
     <item
-        android:id="@+id/opcionSalir"
+        android:id="@+id/itemMenuExit"
         android:orderInCategory="2"
         android:title="@string/menu_exit"
         app:showAsAction="never"
-        android:icon="@drawable/menu_svg_exit"
+        android:icon="@drawable/menu_exit"
         />
 </menu>

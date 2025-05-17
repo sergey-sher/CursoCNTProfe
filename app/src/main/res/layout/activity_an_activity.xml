@@ -6,28 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ANActivity">
+    tools:context=".an.ANActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="0px"
         android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:gravity="center">
 
         <TextView
-            android:id="@+id/txt_titulo"
+            android:id="@+id/textViewANTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/an_text_guess_number"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="272dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="Button" />
+            android:text="Adiviña el número"
+            android:textAlignment="center">
+        </TextView>
     </LinearLayout>
 
     <LinearLayout
@@ -38,49 +31,55 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txt_posibilidades"
+            android:id="@+id/textViewANChances"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/an_text_odds"
-            android:textAlignment="center" />
+            android:textAlignment="center" >
+        </TextView>
 
         <EditText
-            android:id="@+id/txt_numero"
+            android:id="@+id/textViewANNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/an_hint_write_number"
-            android:inputType="number" />
+            android:inputType="number" >
+        </EditText>
 
         <TextView
-            android:id="@+id/txt_mensaxe"
+            android:id="@+id/textViewANMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/an_hint_write_number"
             android:text=""
-            android:textColor="#FF0000" />
+            android:textColor="#FF0000" >
+        </TextView>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="0px"
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btn_check"
+            android:id="@+id/btnANCheck"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="check"
-            android:text="@string/an_btn_check" />
+            android:text="@string/an_btn_check" >
+        </Button>
 
         <Button
-            android:id="@+id/btn_restart"
-            android:layout_width="272dp"
+            android:id="@+id/btnANRestart"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
+            android:visibility="invisible"
+            android:onClick="restartGame"
+            android:text="Restart" >
+        </Button>
     </LinearLayout>
 
 </LinearLayout>

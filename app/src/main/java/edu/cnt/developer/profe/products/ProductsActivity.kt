@@ -9,7 +9,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
 import edu.cnt.developer.profe.utils.NetUtil
-import edu.cnt.developer.profe.R
 import edu.cnt.developer.profe.databinding.ActivityProductsBinding
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
@@ -24,7 +23,6 @@ class ProductsActivity : AppCompatActivity() {
     lateinit var binding: ActivityProductsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
 
         super.onCreate(savedInstanceState)
         binding = ActivityProductsBinding.inflate(layoutInflater)
@@ -68,9 +66,9 @@ class ProductsActivity : AppCompatActivity() {
         val productPriceMax = prodList.maxBy { p -> p.price.toFloat()}
         val productPriceAverage = prodList.map { p -> p.price.toFloat()}.average()
 
-        binding.textViewPriceMin.text = productPriceMin.price.toString()
-        binding.textViewPriceMax.text = productPriceMax.price.toString()
-        binding.textViewPriceAverage.text = productPriceAverage.toString()
+        binding.textViewProductsPriceMin.text = productPriceMin.price.toString()
+        binding.textViewProductsPriceMax.text = productPriceMax.price.toString()
+        binding.textViewProductsPriceAvg.text = productPriceAverage.toString()
 
         binding.sliderProducts.value = productPriceMin.price.toFloat()
         binding.sliderProducts.valueFrom = productPriceMin.price.toFloat()

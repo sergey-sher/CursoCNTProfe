@@ -7,4 +7,27 @@
     android:layout_height="match_parent"
     tools:context=".dogs.DogsGalleryActivity">
 
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerDogs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+    </androidx.viewpager2.widget.ViewPager2>
+
+    <TextView
+        android:id="@+id/textViewDogsBreed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="BREED OF DOGS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPagerDogs" >
+    </TextView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

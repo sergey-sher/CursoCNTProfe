@@ -30,7 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sliderProducts"
-        app:layout_constraintBottom_toTopOf="@id/linearPriceMin">
+        app:layout_constraintBottom_toTopOf="@id/linearProductsPriceMin">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recViewProducts"
@@ -48,14 +48,14 @@
     </FrameLayout>
 
     <LinearLayout
-        android:id="@+id/linearPriceMin"
+        android:id="@+id/linearProductsPriceMin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginBottom="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/linearPriceMax" >
+        app:layout_constraintBottom_toTopOf="@+id/linearProductsPriceMax" >
 
         <TextView
             android:text="Precio mínimo:  "
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content" >
         </TextView>
         <TextView
-            android:id="@+id/textViewPriceMin"
+            android:id="@+id/textViewProductsPriceMin"
             android:text="PriceMin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
@@ -71,14 +71,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearPriceMax"
+        android:id="@+id/linearProductsPriceMax"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginBottom="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/linearPriceAverage" >
+        app:layout_constraintBottom_toTopOf="@+id/linearProductsPriceAvg" >
 
         <TextView
             android:text="Precio máximo:  "
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content" >
         </TextView>
         <TextView
-            android:id="@+id/textViewPriceMax"
+            android:id="@+id/textViewProductsPriceMax"
             android:text="PriceMax"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
@@ -94,7 +94,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearPriceAverage"
+        android:id="@+id/linearProductsPriceAvg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -108,7 +108,7 @@
             android:layout_height="wrap_content" >
         </TextView>
         <TextView
-            android:id="@+id/textViewPriceAverage"
+            android:id="@+id/textViewProductsPriceAvg"
             android:text="PriceAverage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">

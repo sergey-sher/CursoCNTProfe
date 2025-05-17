@@ -9,7 +9,7 @@ class UsersAdapter(var usersList: List<User>): RecyclerView.Adapter<UsersViewHol
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsersViewHolder {
         var userViewHolder: UsersViewHolder
         var layoutInflater = LayoutInflater.from(parent.context)
-        var filaUsuario = layoutInflater.inflate(R.layout.fila_usuario, parent, false) // attachToRoot - false !!!
+        var filaUsuario = layoutInflater.inflate(R.layout.item_user_row, parent, false) // attachToRoot - false !!!
         userViewHolder = UsersViewHolder(filaUsuario)
 
         return userViewHolder

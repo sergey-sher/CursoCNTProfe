@@ -8,7 +8,7 @@
     tools:context=".users.UsersListActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/usersListRecView"
+        android:id="@+id/recViewUsersList"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         app:layout_constraintEnd_toEndOf="parent"

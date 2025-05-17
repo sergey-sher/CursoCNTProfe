@@ -10,7 +10,7 @@ class ProductsAdapter(var productsList: ProductsList): RecyclerView.Adapter<Prod
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductsViewHolder {
         var productsViewHolder: ProductsViewHolder
         var layoutInflater = LayoutInflater.from(parent.context)
-        var filaProduct = layoutInflater.inflate(R.layout.fila_product, parent, false) // attachToRoot - false !!!
+        var filaProduct = layoutInflater.inflate(R.layout.item_product_row, parent, false) // attachToRoot - false !!!
         productsViewHolder = ProductsViewHolder(filaProduct)
 
         return productsViewHolder

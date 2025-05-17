@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Kurz CNT Android</string>
+    <string name="app_imc_name">Index tělesné hmotnosti</string>
+    <string name="app_an_name">Uhádni číslo</string>
+    <string name="app_web_browser_name">Prohlížeč</string>
+    <string name="app_users_name">Uživatelé</string>
+    <string name="app_products_name">Produkty</string>
+    <string name="app_dogs_name">Galerie psů</string>
+    <string name="menu_clean">Vymazat</string>
+    <string name="menu_exit">Odhlásit se</string>
     <string name="imc_hint_weight">Zadejte hmotnost (kg)</string>
     <string name="imc_hint_height">Zadejte výšku (m)</string>
     <string name="imc_result_message">Vaše BMI je %1f</string>
@@ -12,7 +21,5 @@
     <string name="an_text_msg_wrong_greater">Chyba! Číslo je větší.</string>
     <string name="an_text_msg_wrong_less">Chyba! Číslo je menší.</string>
     <string name="an_text_msg_cantplay">Už si nemůžeš hrát.</string>
-    <string name="menu_clean">Vymazat</string>
-    <string name="menu_exit">Odhlásit se</string>
     <string name="dogs_act_label">Galerie psů</string>
 </resources>

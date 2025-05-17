@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="@+id/editTextWeight" />
 
     <Button
-        android:onClick="calcularIMC"
+        android:onClick="calculateIMC"
         android:id="@+id/buttonCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

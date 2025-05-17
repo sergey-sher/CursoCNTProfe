@@ -22,12 +22,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         Log.d("MYAPP", "Estoy en oncreate")
-        val nameVersion:String = obtenerVersionAndroid()
+        val nameVersion:String = getAndroidVersion()
         Log.d("MYAPP", "Version " + nameVersion)
         Log.d("MYAPP", "Version = $nameVersion")
     }
 
-    fun obtenerVersionAndroid(): String {
+    fun getAndroidVersion(): String {
         var nameVersion : String = ""
         nameVersion = when (Build.VERSION.SDK_INT) {
             Build.VERSION_CODES.Q -> "ANDROID Q 10"
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
     fun botonClickado(view: View) {
         Log.d("MYAPP", "El usario ha tocado al boton")
-        val nameVersion = obtenerVersionAndroid()
+        val nameVersion = getAndroidVersion()
         val fieldText : TextView = findViewById<TextView>(R.id.cajatexto)
         fieldText.text = nameVersion
     }

@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">CNT Android course</string>
+    <string name="app_imc_name">Body mass index</string>
+    <string name="app_an_name">Guess the number</string>
+    <string name="app_web_browser_name">Browser</string>
+    <string name="app_users_name">Users</string>
+    <string name="app_products_name">Products</string>
+    <string name="app_dogs_name">Gallery of dogs</string>
+    <string name="menu_clean">Clean</string>
+    <string name="menu_exit">Exit</string>
     <string name="imc_hint_weight">Enter weight (kg)</string>
     <string name="imc_hint_height">Enter height (m)</string>
     <string name="imc_result_message">Your IMC is %1f</string>
@@ -12,7 +21,5 @@
     <string name="an_text_msg_wrong_greater">Error! The number is greater.</string>
     <string name="an_text_msg_wrong_less">Error! The number is less.</string>
     <string name="an_text_msg_cantplay">You can\'t play anymore.</string>
-    <string name="menu_clean">Clean</string>
-    <string name="menu_exit">Exit</string>
     <string name="dogs_act_label">Dog gallery</string>
 </resources>

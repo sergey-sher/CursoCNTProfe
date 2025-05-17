@@ -7,4 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".PrincipalActivity">
 
+    <GridView
+        android:id="@+id/gridViewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:verticalSpacing="16dp"
+        android:horizontalSpacing="16dp"
+        android:gravity="center"
+        android:stretchMode="columnWidth" >
+    </GridView>
 </androidx.constraintlayout.widget.ConstraintLayout>

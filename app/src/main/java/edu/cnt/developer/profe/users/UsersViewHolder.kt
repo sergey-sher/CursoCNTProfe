@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import edu.cnt.developer.profe.R
 
 class UsersViewHolder(itemView:View): RecyclerView.ViewHolder(itemView) {
-    val userName: TextView = itemView.findViewById(R.id.userName)
-    val userAge: TextView = itemView.findViewById(R.id.userAge)
+    val userName: TextView = itemView.findViewById(R.id.textViewUserName)
+    val userAge: TextView = itemView.findViewById(R.id.textViewUserAge)
     fun fillUserViewHolder(user: User) {
         this.userName.text = user.name
         this.userAge.text = user.age.toString()

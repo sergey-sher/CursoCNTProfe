@@ -40,11 +40,11 @@ class IMCActivity : AppCompatActivity() {
         Log.d("MYAPP", "onOptionsItemSelected: Menu app bar tocado': ${item.itemId} ${item.title} ${item.itemId}")
         when (item.itemId)
         {
-            R.id.opcionLimpiar -> {
+            R.id.itemMenuClear -> {
                 Log.d("MYAPP", "onOptionsItemSelected: Ha tocado la opcion de limpiar")
-                this.limpiaFormulario()
+                this.clearForm()
             }
-            R.id.opcionSalir -> {
+            R.id.itemMenuExit -> {
                 Log.d("MYAPP", "onOptionsItemSelected: Ha tocado la opcion de salir")
                 this.finish()
             }
@@ -52,7 +52,7 @@ class IMCActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    fun calcularIMC(view: View) {
+    fun calculateIMC(view: View) {
         if (view.id == R.id.buttonCalcular) {
             Log.d("MYAPP", "CalcularIMC: El usario ha tocado al boton 'Calcular IMC': ${view.id}")
             Log.d("MYAPP", "CalcularIMC: absolute = ${R.id.buttonCalcular.absoluteValue}")
@@ -91,12 +91,12 @@ class IMCActivity : AppCompatActivity() {
 
     }
 
-    private fun limpiaFormulario() {
+    private fun clearForm() {
         findViewById<EditText>( R.id.editTextWeight).text.clear()
         findViewById<EditText>( R.id.editTextHeight).text.clear()
     }
 
-    private fun salirApp() {
+    private fun exitApp() {
         //this.finish()
         var dialogo = AlertDialog.Builder(this)
             .setTitle("SALIR")

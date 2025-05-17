@@ -20,12 +20,12 @@ import edu.cnt.developer.profe.databinding.ActivityDogsBinding
 
 class DogsActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
-    var selectedRace:String = ""
-    lateinit var spinnerRaces: Spinner
-    val arrayRaces = arrayOf("affenpinscher", "african", "airedale", "akita", "appenzeller", "australian")
+    var selectedBreed:String = ""
+    lateinit var spinnerBreed: Spinner
+    val arrayBreeds = arrayOf("affenpinscher", "african", "airedale", "akita", "appenzeller", "australian")
     private lateinit var binding: ActivityDogsBinding
     //var firstTime: Boolean = true
-
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d("MYAPP", "DogsActivity: onCreate: start")
@@ -45,12 +45,13 @@ class DogsActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
         Log.d("MYAPP", "Setting spinner")
 
-        this.spinnerRaces = findViewById(R.id.spinnerRaces)
-        val spinnerAdapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arrayRaces)
+        this.spinnerBreed = binding.spinnerDogsBreed
+        //this.spinnerBreed = findViewById(R.id.spinnerDogsBreed)
+        val spinnerAdapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arrayBreeds)
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        this.spinnerRaces.adapter = spinnerAdapter
+        this.spinnerBreed.adapter = spinnerAdapter
         //programamos la escucha del spinner
-        binding.spinnerRaces.onItemSelectedListener = this
+        binding.spinnerDogsBreed.onItemSelectedListener = this
 
         Log.d("MYAPP", "DogsActivity: onCreate: finish")
 
@@ -61,30 +62,15 @@ class DogsActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
 //        if (!this.firstTime) {
 
-        this.selectedRace = (opcionTocada as TextView).text.toString()
-        Log.d("MYAPP", "Raza seleccionada = ${this.selectedRace}" )
+        this.selectedBreed = (opcionTocada as TextView).text.toString()
+        Log.d("MYAPP", "Raza seleccionada = ${this.selectedBreed}" )
         //parent?.getItemAtPosition(position)
 
         Log.d("MYAPP", "Setting snack")
-        val snack = Snackbar.make(binding.main, "PERRO SELECCIONADO", BaseTransientBottomBar.LENGTH_LONG)
+        val snack = Snackbar.make(binding.main, "PERRO SELECCIONADO: $selectedBreed", BaseTransientBottomBar.LENGTH_LONG)
         snack.setAction("CERRAR") { vista ->Log.d("MYAPP", "Snackbar tocado")}
         snack.setTextColor(getColor(R.color.red))
         snack.show()
-
-//        if (NetUtil.isInternet(this)) {
-//
-//            Log.d("MYAPP", "Si hay internet")
-//            val intentGallery = Intent(this, DogsGalleryActivity::class.java)
-//            startActivity(intentGallery)
-//        } else {
-//            Log.d("MYAPP", "No hay internet")
-//            val toastSinConnection = Toast.makeText(this, "No hay conexion", Toast.LENGTH_LONG)
-//            toastSinConnection.show()
-//        }
-
-//        } else {
-//            this.firstTime = false
-//        }
 
         Log.d("MYAPP", "DogsActivity: onItemSelected: finish")
 
@@ -94,18 +80,19 @@ class DogsActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         Log.d("MYAPP", "DogsActivity: onNothingSelected: finish" )
     }
 
-    fun findFotos(view: View) {
-        Log.d("MYAPP", "DogsActivity: findFotos: start")
+    fun findPhotos(view: View) {
+        Log.d("MYAPP", "DogsActivity: findPhotos: start")
         if (NetUtil.isInternet(this)) {
             Log.d("MYAPP", "Sí hay internet")
-            val intentGaleria = Intent(this, DogsGalleryActivity::class.java)
-            startActivity(intentGaleria)
+            val intentGallery = Intent(this, DogsGalleryActivity::class.java)
+            intentGallery.putExtra("DOGS_BREED", selectedBreed)
+            startActivity(intentGallery)
         } else {
             Log.d("MYAPP", "No hay internet")
-            val toastSinConexion = Toast.makeText(this, "NO HAY CONEXIÓN", Toast.LENGTH_LONG)
-            toastSinConexion.show()
+            val toastSinConnection = Toast.makeText(this, "NO HAY CONEXIÓN!", Toast.LENGTH_LONG)
+            toastSinConnection.show()
         }
-        Log.d("MYAPP", "DogsActivity: findFotos: finish")
+        Log.d("MYAPP", "DogsActivity: findPhotos: finish")
     }
 
 }

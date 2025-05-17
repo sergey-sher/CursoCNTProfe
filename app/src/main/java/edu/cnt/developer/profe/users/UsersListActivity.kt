@@ -33,7 +33,7 @@ class UsersListActivity : AppCompatActivity() {
 
         Log.d("MYAPP", "UsersListActivity: onCreate: List of users = ${listUsers}")
 
-        var recView = findViewById<RecyclerView>(R.id.usersListRecView)
+        var recView = findViewById<RecyclerView>(R.id.recViewUsersList)
 
         //adapter
         Log.d("MYAPP", "UsersListActivity: onCreate: Attaching the adapter")
