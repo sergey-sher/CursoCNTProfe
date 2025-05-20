@@ -19,42 +19,35 @@ import edu.cnt.developer.profe.R
 import edu.cnt.developer.profe.databinding.ActivityDogsBinding
 
 class DogsActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
-
-    var selectedBreed:String = ""
+    var selectedBreed: String = ""
     lateinit var spinnerBreed: Spinner
     val arrayBreeds = arrayOf("affenpinscher", "african", "airedale", "akita", "appenzeller", "australian")
     private lateinit var binding: ActivityDogsBinding
-    //var firstTime: Boolean = true
+    var firstTimeSpinner: Boolean = true
     
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         Log.d("MYAPP", "DogsActivity: onCreate: start")
+        super.onCreate(savedInstanceState)
 
-        //enableEdgeToEdge()
-
-        Log.d("MYAPP", "setting spinner")
+        Log.d("MYAPP", "Setting spinner")
         binding = ActivityDogsBinding.inflate(layoutInflater)
         val view = binding.root
 
         setContentView(view)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.drawerMenuPrincipal)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        Log.d("MYAPP", "Setting spinner")
-
+        Log.d("MYAPP", "Setting spinner adapter")
         this.spinnerBreed = binding.spinnerDogsBreed
-        //this.spinnerBreed = findViewById(R.id.spinnerDogsBreed)
         val spinnerAdapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arrayBreeds)
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         this.spinnerBreed.adapter = spinnerAdapter
-        //programamos la escucha del spinner
         binding.spinnerDogsBreed.onItemSelectedListener = this
 
         Log.d("MYAPP", "DogsActivity: onCreate: finish")
-
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, opcionTocada: View?, position: Int, id: Long) {
@@ -66,14 +59,17 @@ class DogsActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         Log.d("MYAPP", "Raza seleccionada = ${this.selectedBreed}" )
         //parent?.getItemAtPosition(position)
 
-        Log.d("MYAPP", "Setting snack")
-        val snack = Snackbar.make(binding.main, "PERRO SELECCIONADO: $selectedBreed", BaseTransientBottomBar.LENGTH_LONG)
-        snack.setAction("CERRAR") { vista ->Log.d("MYAPP", "Snackbar tocado")}
-        snack.setTextColor(getColor(R.color.red))
-        snack.show()
+        if (!this.firstTimeSpinner) {
+            Log.d("MYAPP", "Setting snack")
+            val snack = Snackbar.make(binding.drawerMenuPrincipal, "PERRO SELECCIONADO: $selectedBreed", BaseTransientBottomBar.LENGTH_LONG)
+            snack.setAction("CERRAR") { vista -> Log.d("MYAPP", "Snackbar tocado")}
+            snack.setTextColor(getColor(R.color.red))
+            snack.show()
+        } else {
+            this.firstTimeSpinner = false
+        }
 
         Log.d("MYAPP", "DogsActivity: onItemSelected: finish")
-
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -82,16 +78,18 @@ class DogsActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     fun findPhotos(view: View) {
         Log.d("MYAPP", "DogsActivity: findPhotos: start")
+
         if (NetUtil.isInternet(this)) {
-            Log.d("MYAPP", "Sí hay internet")
+            Log.d("MYAPP", "DogsActivity: findPhotos: Sí hay internet")
             val intentGallery = Intent(this, DogsGalleryActivity::class.java)
             intentGallery.putExtra("DOGS_BREED", selectedBreed)
             startActivity(intentGallery)
         } else {
-            Log.d("MYAPP", "No hay internet")
+            Log.d("MYAPP", "DogsActivity: findPhotos: No hay internet")
             val toastSinConnection = Toast.makeText(this, "NO HAY CONEXIÓN!", Toast.LENGTH_LONG)
             toastSinConnection.show()
         }
+
         Log.d("MYAPP", "DogsActivity: findPhotos: finish")
     }
 

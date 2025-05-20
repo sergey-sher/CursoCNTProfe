@@ -27,7 +27,7 @@ class ANActivity : AppCompatActivity() {
         Log.d("MYAPP", "onCreate")
         enableEdgeToEdge()
         setContentView(R.layout.activity_an_activity)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.drawerMenuPrincipal)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets

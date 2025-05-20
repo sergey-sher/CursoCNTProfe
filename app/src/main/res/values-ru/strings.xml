@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Курс CNT Android</string>
-    <string name="app_imc_name">Индекс массы тела</string>
-    <string name="app_an_name">Угадай число</string>
-    <string name="app_web_browser_name">Браузер</string>
-    <string name="app_users_name">Пользователи</string>
-    <string name="app_products_name">Продукты</string>
-    <string name="app_dogs_name">Галерея собак</string>
+    <string name="app_name_versions">Версия Android</string>
+    <string name="app_name_imc">Индекс массы тела</string>
+    <string name="app_name_an">Угадай число</string>
+    <string name="app_name_webbrowser">Браузер</string>
+    <string name="app_name_users">Пользователи</string>
+    <string name="app_name_products">Продукты</string>
+    <string name="app_name_dogs">Галерея собак</string>
+    <string name="app_name_tabs">Вкладки</string>
+    <string name="app_name_date_and_time">Дата и время</string>
     <string name="menu_clean">Очистить</string>
     <string name="menu_exit">Выйти</string>
     <string name="imc_hint_weight">Введите вес (кг)</string>
@@ -22,4 +25,6 @@
     <string name="an_text_msg_wrong_less">Ошибка! Число меньше.</string>
     <string name="an_text_msg_cantplay">Ты больше не можешь играть.</string>
     <string name="dogs_act_label">Галерея собак</string>
+    <string name="dateandtime_hint_date">Дата</string>
+    <string name="dateandtime_hint_hour">Час</string>
 </resources>

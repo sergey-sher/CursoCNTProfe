@@ -8,7 +8,7 @@ import android.widget.BaseAdapter
 import android.widget.TextView
 import android.widget.ImageView
 
-class PrincipalMenuAdapter(private val context: Context, private val menuItems: List<PrincipalMenuItem>) :
+class PrincipalAddMenuAdapter(private val context: Context, private val menuItems: List<PrincipalMenuItem>) :
     BaseAdapter() {
 
     override fun getCount(): Int = menuItems.size

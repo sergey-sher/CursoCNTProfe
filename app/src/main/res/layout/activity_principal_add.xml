@@ -5,13 +5,16 @@
     android:id="@+id/drawerMenuPrincipal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".users.UsersListActivity">
+    tools:context=".PrincipalAddActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recViewUsersList"
+    <GridView
+        android:id="@+id/gridViewMenuAdd"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:verticalSpacing="16dp"
+        android:horizontalSpacing="16dp"
+        android:gravity="center"
+        android:stretchMode="columnWidth" >
+    </GridView>
 </androidx.constraintlayout.widget.ConstraintLayout>

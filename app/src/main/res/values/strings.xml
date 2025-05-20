@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">Curso CNT Android</string>
-    <string name="app_imc_name">Índice de masa corporal</string>
-    <string name="app_an_name">Adivina el numero</string>
-    <string name="app_web_browser_name">Navegador</string>
-    <string name="app_users_name">Usuarios</string>
-    <string name="app_products_name">Productos</string>
-    <string name="app_dogs_name">Galería de perros</string>
+    <string name="app_name_versions">Versión de Android</string>
+    <string name="app_name_imc">Índice de masa corporal</string>
+    <string name="app_name_an">Adivina el numero</string>
+    <string name="app_name_webbrowser">Navegador</string>
+    <string name="app_name_users">Usuarios</string>
+    <string name="app_name_products">Productos</string>
+    <string name="app_name_dogs">Galería de perros</string>
+    <string name="app_name_tabs">Tabs</string>
+    <string name="app_name_date_and_time">Fecha y hora</string>
     <string name="menu_clean">Limpiar</string>
     <string name="menu_exit">Salir</string>
     <string name="imc_hint_weight">Intro peso (kg)</string>
@@ -21,5 +24,6 @@
     <string name="an_text_msg_wrong_less">¡Error! El número es menor.</string>
     <string name="an_text_msg_cantplay">Ya no puedes jugar más.</string>
     <string name="dogs_act_label">Galería de perros</string>
-
+    <string name="dateandtime_hint_date">Fecha</string>
+    <string name="dateandtime_hint_hour">Hora</string>
 </resources>
