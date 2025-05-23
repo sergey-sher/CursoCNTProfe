@@ -27,4 +27,5 @@
     <string name="dogs_act_label">Dog gallery</string>
     <string name="dateandtime_hint_date">Date</string>
     <string name="dateandtime_hint_hour">Hour</string>
+    <string name="app_name_notifications">Notifications</string>
 </resources>

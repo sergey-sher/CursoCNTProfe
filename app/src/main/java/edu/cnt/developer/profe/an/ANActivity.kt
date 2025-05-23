@@ -23,8 +23,8 @@ class ANActivity : AppCompatActivity() {
     lateinit var campoResultado: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d("MYAPP", "ANActivity: onCreate: start")
         super.onCreate(savedInstanceState)
-        Log.d("MYAPP", "onCreate")
         enableEdgeToEdge()
         setContentView(R.layout.activity_an_activity)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.drawerMenuPrincipal)) { v, insets ->
@@ -41,6 +41,7 @@ class ANActivity : AppCompatActivity() {
         this.posibilidades = savedInstanceState?.getInt("NUM_POSIBILIDADES") ?: 5
         Log.d("MYAPP", "Dato: numero = ${numeroAleatorio}")
         this.campoPosibilidades.text = this.posibilidades.toString()
+        Log.d("MYAPP", "ANActivity: onCreate: finish")
     }
 
     override fun onStart() {
@@ -50,22 +51,22 @@ class ANActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        Log.d("MYAPP", "Pause")
+        Log.d("MYAPP", "ANActivity: Pause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d("MYAPP", "Stop")
+        Log.d("MYAPP", "ANActivity: Stop")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("MYAPP", "Destroy")
+        Log.d("MYAPP", "ANActivity: Destroy")
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        Log.d("MYAPP", "SaveInstanceState")
+        Log.d("MYAPP", "ANActivity: onSaveInstanceState")
         outState.putInt("NUM_POSIBLIDADES", this.posibilidades)
         outState.putInt("NUM_ALEATORIO", this.numeroAleatorio)
     }

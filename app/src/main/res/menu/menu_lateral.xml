@@ -68,6 +68,30 @@
                 android:icon="@drawable/menu_item_other"
                 app:showAsAction="always" >
             </item>
+            <item
+                android:title="@string/app_name_notifications"
+                android:orderInCategory="9"
+                android:icon="@drawable/menu_item_other"
+                app:showAsAction="always" >
+            </item>
+            <item
+                android:title="@string/app_name_maps"
+                android:orderInCategory="10"
+                android:icon="@drawable/menu_item_other"
+                app:showAsAction="always" >
+            </item>
+            <item
+                android:title="@string/app_name_auth"
+                android:orderInCategory="11"
+                android:icon="@drawable/menu_item_other"
+                app:showAsAction="always" >
+            </item>
+            <item
+                android:title="@string/app_name_realtimedb"
+                android:orderInCategory="12"
+                android:icon="@drawable/menu_item_other"
+                app:showAsAction="always" >
+            </item>
         </menu>
     </item>
 </menu>

@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -47,6 +49,12 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.google.material)
+    implementation(libs.auth.api.impl)
+    implementation(libs.gms.play.services.maps)
+    implementation(libs.play.services.location)
+    implementation(libs.androidx.annotation)
+    implementation(libs.firebase.auth.ktx)
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -56,5 +64,5 @@ dependencies {
     implementation(libs.converter.gson)
     implementation(libs.androidx.recyclerview)
     implementation("com.squareup.picasso:picasso:2.71828")
-
+    implementation(platform("com.google.firebase:firebase-bom:33.14.0"))
 }

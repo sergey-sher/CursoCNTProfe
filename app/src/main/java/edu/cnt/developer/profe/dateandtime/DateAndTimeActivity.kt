@@ -28,6 +28,7 @@ class DateAndTimeActivity : AppCompatActivity(), View.OnFocusChangeListener {
         Log.d("MYAPP", "DateAndTimeActivity: onFocusChange: start")
 
         if (hasFocus) {
+            v!!.clearFocus()
             when (v!!.id) {
                 R.id.editTextDate -> {
                     Log.d("MYAPP", "Ha tocado la caja de fecha")
@@ -44,11 +45,6 @@ class DateAndTimeActivity : AppCompatActivity(), View.OnFocusChangeListener {
         //ocultarTeclado(this)
 
         Log.d("MYAPP", "DateAndTimeActivity: onFocusChange: finish")
-    }
-
-    fun ocultarTeclado(view: View?) {
-        val inputService = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        inputService.hideSoftInputFromWindow(view?.windowToken, 0)
     }
 
     fun actualizarHoraSeleccionada(newHour:String) : Unit

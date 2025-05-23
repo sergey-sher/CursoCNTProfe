@@ -9,6 +9,10 @@
     <string name="app_name_dogs">Galería de perros</string>
     <string name="app_name_tabs">Tabs</string>
     <string name="app_name_date_and_time">Fecha y hora</string>
+    <string name="app_name_notifications">Notificaciones</string>
+    <string name="app_name_maps">MapsActivity</string>
+    <string name="app_name_auth">"Authenticacion to Firebase"</string>
+    <string name="app_name_realtimedb">"Login to Firebase"</string>
     <string name="menu_clean">Limpiar</string>
     <string name="menu_exit">Salir</string>
     <string name="imc_hint_weight">Intro peso (kg)</string>

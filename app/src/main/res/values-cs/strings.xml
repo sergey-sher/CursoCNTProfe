@@ -27,4 +27,5 @@
     <string name="dogs_act_label">Galerie psů</string>
     <string name="dateandtime_hint_date">Datum</string>
     <string name="dateandtime_hint_hour">Hodina</string>
+    <string name="app_name_notifications">Oznámení</string>
 </resources>

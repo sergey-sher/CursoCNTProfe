@@ -15,6 +15,9 @@ import edu.cnt.developer.profe.products.ProductsActivity
 import edu.cnt.developer.profe.dogs.DogsActivity
 import edu.cnt.developer.profe.tabs.TabsActivity
 import edu.cnt.developer.profe.dateandtime.DateAndTimeActivity
+import edu.cnt.developer.profe.maps.MapsActivity
+import edu.cnt.developer.profe.auth.AuthenticationActivity
+import edu.cnt.developer.profe.realtimedb.ClientsActivity
 
 class PrincipalActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -78,11 +81,18 @@ class PrincipalActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             6 -> {classObjet = DogsActivity::class.java}
             7 -> {classObjet = TabsActivity::class.java}
             8 -> {classObjet = DateAndTimeActivity::class.java}
+            9 -> {Notifications.launchNotification(this)}
+            10 -> {classObjet = MapsActivity::class.java}
+            11 -> {classObjet = AuthenticationActivity::class.java}
+            12 -> {classObjet = ClientsActivity::class.java}
         }
 
         this.drawerLayout.closeDrawers()
-        val intent = Intent(this, classObjet)
-        startActivity(intent)
+
+        if (item.order!=9) { //si ha lanzado una notificación, no vamos a ninguna actividad
+            val intent = Intent(this, classObjet)
+            startActivity(intent)
+        }
 
         Log.d("MYAPP", "PrincipalActivity: onNavigationItemSelected: finish")
         return super.onOptionsItemSelected(item)
